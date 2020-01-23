@@ -5,6 +5,7 @@
  */
 
 package nsgl.real.variation;
+import nsgl.random.Pick;
 import nsgl.real.random.Random;
 import nsgl.search.variation.ParameterizedObject;
 
@@ -16,10 +17,10 @@ public class IntensityMutation extends Mutation implements ParameterizedObject<D
     // Mutation definitions
     protected double sigma;
     protected Random g;
-    protected double[] delta;
+    protected double[] delta = new double[0];
     
     public IntensityMutation( double sigma, Random g, 
-                              PickComponents components){
+                              Pick components){
         super(components);
         this.sigma = sigma;
         this.g = g;
@@ -30,26 +31,12 @@ public class IntensityMutation extends Mutation implements ParameterizedObject<D
     }
     
     protected double[] delta(int DIMENSION){
+    	if( delta.length == DIMENSION ) for( int i=0; i<indices.length; i++) delta[indices[i]]=0.0;
+    	else delta = new double[DIMENSION];
         if( components != null ){
-            if( delta != null && delta.length == DIMENSION ){
-                for( int i=0; i<indices.length; i++){
-                    delta[indices[i]]=0.0;
-                }
-            }else{
-                delta = new double[DIMENSION];
-            }
             indices = components.get(DIMENSION);
-            for( int i=0; i<indices.length; i++ ){
-                   delta[indices[i]] =  sigma*g.next();
-            }
-        }else{
-        	if( delta == null ){
-        		delta = new double[DIMENSION];
-        	}
-            for( int i=0; i<delta.length; i++){
-                   delta[i] =  sigma*g.next();
-            }
-        }
+            for( int i=0; i<indices.length; i++ ) delta[indices[i]] =  sigma*g.next();
+        }else for( int i=0; i<delta.length; i++) delta[i] =  sigma*g.next();
         return delta;
     }
         

@@ -5,6 +5,7 @@
  */
 package nsgl.real.variation;
 
+import nsgl.random.Pick;
 import nsgl.real.random.PowerLaw;
 import nsgl.real.random.Symmetric;
 
@@ -21,7 +22,7 @@ public class PowerLawMutation extends IntensityMutation {
       super(sigma, new Symmetric(new PowerLaw()));
   }
 
-    public PowerLawMutation( double sigma, PickComponents components){
+    public PowerLawMutation( double sigma, Pick components){
         super(sigma, new Symmetric(new PowerLaw()), components);
     }
 }

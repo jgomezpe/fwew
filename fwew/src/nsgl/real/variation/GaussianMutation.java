@@ -1,5 +1,6 @@
 package nsgl.real.variation;
 
+import nsgl.random.Pick;
 import nsgl.real.random.Gaussian;
 
 /**
@@ -20,7 +21,7 @@ public class GaussianMutation extends IntensityMutation {
       super(sigma, new Gaussian());
   }
 
-    public GaussianMutation(double sigma, PickComponents components){
+    public GaussianMutation(double sigma, Pick components){
         super(sigma, new Gaussian(), components);
     }
 }

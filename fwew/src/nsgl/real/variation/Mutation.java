@@ -6,6 +6,7 @@
 
 package nsgl.real.variation;
 
+import nsgl.random.Pick;
 import nsgl.search.variation.Variation_1_1;
 
 /**
@@ -14,12 +15,10 @@ import nsgl.search.variation.Variation_1_1;
  */
 public abstract class Mutation implements Variation_1_1<double[]>{
     // Mutation definitions
-    protected PickComponents components = null;
+    protected Pick components = null;
     protected int[] indices = new int[0];
     
-    public Mutation(PickComponents components){
-        this.components = components;
-    }
+    public Mutation(Pick components){ this.components = components; }
     
     public Mutation(){}            
 }
