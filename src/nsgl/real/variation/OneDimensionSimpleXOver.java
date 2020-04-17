@@ -1,6 +1,6 @@
 package nsgl.real.variation;
 
-import nsgl.generic.array.DynArray;
+import nsgl.generic.array.Vector;
 import nsgl.search.space.Space;
 
 /**
@@ -24,7 +24,7 @@ public class OneDimensionSimpleXOver extends SimpleXOver {
    * @param c2 Second Individuals genome to be modified by the genetic operator
    * @return extra information of the genetic operator
    */
-  public DynArray<double[]> generates(Space<double[]> space, double[] c1, double[] c2) {
+  public Vector<double[]> generates(Space<double[]> space, double[] c1, double[] c2) {
       try {
           double[] x = c1.clone();
           double[] y = c2.clone();
@@ -32,7 +32,7 @@ public class OneDimensionSimpleXOver extends SimpleXOver {
           double t = x[pos];
           x[pos] = y[pos];
           y[pos] = t;
-          DynArray<double[]> v = new DynArray<double[]>();
+          Vector<double[]> v = new Vector<double[]>();
           v.add(x);
           v.add(y);
           return v;

@@ -1,6 +1,6 @@
 package nsgl.generic;
 
-import nsgl.generic.array.DynArray;
+import nsgl.generic.array.Vector;
 
 public class CodeDecodeMap<G,P>{
 	/**
@@ -24,9 +24,9 @@ public class CodeDecodeMap<G,P>{
 	   * @param genomes Genomes used for building the population of individuals
 	   * @return Population of individuals built upon the given genomes
 	   */
-	  public DynArray<P> decodeArray( DynArray<G> genomes ){
+	  public Vector<P> decodeArray( Vector<G> genomes ){
 	      G genome;
-	      DynArray<P> v = new DynArray<P>();
+	      Vector<P> v = new Vector<P>();
 	      try{
 	    	  int n = genomes.size();
 	    	  for( int i=0; i<n; i++ ){
@@ -43,8 +43,8 @@ public class CodeDecodeMap<G,P>{
 	   * @param population Population used for obtaining the first <i>n</i> genomes
 	   * @return The first <i>n</i> candidate solutions genomes of the population
 	   */
-	  public DynArray<G> codeArray( int n, DynArray<P> population ){
-	      DynArray<G> genomes = new DynArray<G>();
+	  public Vector<G> codeArray( int n, Vector<P> population ){
+	      Vector<G> genomes = new Vector<G>();
 	      try{ for( int i=0; i<n; i++ ) genomes.add( code(population.get(i)) ); }catch(Exception e){}
 	      return genomes;
 	  }
@@ -55,7 +55,7 @@ public class CodeDecodeMap<G,P>{
 	   * @param population Population used for obtaining the first <i>n</i> genomes
 	   * @return The first <i>n</i> candidate solutions genomes of the population
 	   */
-	  public DynArray<G> codeArray( DynArray<P> population ){
+	  public Vector<G> codeArray( Vector<P> population ){
 	      return codeArray( population.size(), population );
 	  }
 }

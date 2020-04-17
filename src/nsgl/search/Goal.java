@@ -26,7 +26,8 @@ public abstract class Goal<T, R> extends Function<T,R>{
     @Override
     public R apply( T x ){
     	R y = compute(x);
-        Traceable.cast(this).trace(x, y);
+        Traceable t = Traceable.cast(this);
+        if( t!=null) t.trace(x, y);
     	return y;
     }
 }
