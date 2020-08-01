@@ -3,7 +3,6 @@ package nsgl.search.solution;
 import java.io.IOException;
 import java.io.Writer;
 
-import nsgl.exception.IO;
 import nsgl.io.Writable;
 import nsgl.io.Write;
 import nsgl.generic.Tagged;
@@ -19,14 +18,12 @@ public class SolutionWrite<T> implements Write {
 	}
 	
 	public void write(Tagged<T> sol, Writer out) throws IOException {
-		try{
-			out.write(""+goal.apply(sol));
-			if( write_object ){
-				out.write(' ');
-				Writable w = Writable.cast(sol.unwrap());
-				if( w != null ) w.write(out);
-			}
-		}catch(IOException e){ IO.exception(IO.OTHER, e); }
+		out.write(""+goal.apply(sol));
+		if( write_object ){
+			out.write(' ');
+			Writable w = Writable.cast(sol.unwrap());
+			if( w != null ) w.write(out);
+		}
 	}
 
 	@SuppressWarnings("unchecked")

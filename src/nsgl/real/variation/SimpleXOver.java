@@ -1,7 +1,6 @@
 package nsgl.real.variation;
 
 import nsgl.integer.random.Uniform;
-import nsgl.real.variation.RealArityTwo;
 
 /**
  * <p>Title: SimpleXOver</p>
