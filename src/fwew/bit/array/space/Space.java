@@ -1,0 +1,7 @@
+package fwew.bit.array.space;
+
+public class Space extends VarLength {
+	public Space( int n ){
+		super(n,n); 
+	}
+}
