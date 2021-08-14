@@ -1,5 +1,11 @@
 # fwew
 A set of searching concepts and functions for the numtseng infrastructure. It includes concepts of search algorithm such as, search space, goal, informed search (A*, heuristic), uninformed search (breath, depth, iterative depth, uniform cost), variation, mutation, crossover, graph search, hill climbing algorithm, population search, and so on
+&nbsp;Requires:
+
+&nbsp;kerno.jar, speco.jar, kompari.jar, spuro.jar, matematiko.jar, and hazarda.jar
+
+&nbsp;Available at <A HREF="https://github.com/jgomezpe/libs/">https://github.com/jgomezpe/libs/</A>
+
 <h3>Version 1.0</h3>
 <h3>Copyright (c)</h3>
 &nbsp;Author: <A HREF="https://disi.unal.edu.co/~jgomezpe/"> Jonatan Gomez-Perdomo </A>
