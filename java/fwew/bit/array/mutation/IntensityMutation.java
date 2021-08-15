@@ -1,7 +1,7 @@
 package fwew.bit.array.mutation;
 
 import kopii.Copier;
-import fwew.local.Variation;
+import fwew.vr.Variation;
 import hazarda.Hazarda;
 import hazarda.integer.Random;
 import speco.bit.array.Array;
@@ -19,4 +19,6 @@ public class IntensityMutation implements Variation<Array>{
 	for( int i=0; i<idx.length; i++ ){ gen.not(idx[i]); }
 	return gen;
     }	
+    @Override
+    public int[] signature() { return new int[] {1,1}; }
 }

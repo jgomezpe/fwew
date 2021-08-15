@@ -1,5 +1,5 @@
 package fwew.bit.array.xover;
-import fwew.population.Variation;
+import fwew.vr.Variation;
 import kopii.Copier;
 import speco.bit.array.Array;
 
@@ -11,7 +11,7 @@ import speco.bit.array.Array;
  * @version 1.0
  */
 
-public class Join implements Variation<Array>{
+public class Join implements Variation<Array[]>{
     /**
      * Apply the simple point crossover operation over the given genomes
      * @param c1 The first parent

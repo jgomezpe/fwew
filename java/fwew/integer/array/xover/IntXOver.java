@@ -4,14 +4,14 @@
  */
 package fwew.integer.array.xover;
 
-import fwew.population.Variation;
+import fwew.vr.Variation;
 import hazarda.Hazarda;
 
 /**
  *
  * @author Jonatan
  */
-public class IntXOver implements Variation<int[]>{
+public class IntXOver implements Variation<int[][]>{
     public IntXOver(){}
    
     /**

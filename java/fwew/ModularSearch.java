@@ -1,7 +1,8 @@
-package fwew.local;
+package fwew;
 
 import fwew.space.Space;
 import fwew.space.SpaceSampler;
+import fwew.vr.Variation;
 
 public class ModularSearch<T> implements Search<T> {
     protected SpaceSampler<T> init;
@@ -19,8 +20,8 @@ public class ModularSearch<T> implements Search<T> {
     public T init(Space<T> space) { return init.apply(space); }
 
     @Override
-    public boolean stop_condition(int iter) {	
-	return stop_condition.check(this, iter);
+    public boolean stop_condition(T current, int iter) {	
+	return stop_condition.check(this, current, iter);
     }
 
     @Override

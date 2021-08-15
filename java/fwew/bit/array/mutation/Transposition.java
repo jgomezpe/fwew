@@ -1,6 +1,6 @@
 package fwew.bit.array.mutation;
 
-import fwew.local.Variation;
+import fwew.vr.Variation;
 import hazarda.integer.Uniform;
 import kopii.Copier;
 import speco.bit.array.Array;
@@ -51,4 +51,6 @@ public class Transposition implements Variation<Array>{
       }catch( Exception e ){}
       return null;
   }
+    @Override
+    public int[] signature() { return new int[] {1,1}; }
 }

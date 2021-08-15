@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fwew.local;
+package fwew.vr;
 
 /**
  *
@@ -21,5 +21,10 @@ public class VariationReplace<T> implements Variation<T>{
     @Override
     public T apply(T x){
 	return replace.apply(x,variation.apply(x));
+    }
+
+    @Override
+    public int[] signature() {
+	return new int[] {variation.signature()[0],replace.signature()};
     }
 }

@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fwew.local;
+package fwew.vr;
 
 /**
  *
  * @author jgomez
  */
 public interface Replacement<T> {
-    public T apply( T current, T next );
+    T apply( T current, T next );
+    default int signature() { return 1; }
 }

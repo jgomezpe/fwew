@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 package fwew.real.array.mutation;
-import fwew.local.Variation;
+import fwew.vr.Variation;
 import hazarda.integer.Uniform;
 
 /**
@@ -53,4 +53,7 @@ public class RTransposition implements Variation<double[]>{
 		}catch( Exception e ){}
 	    return null;
 	}	
+
+	    @Override
+	    public int[] signature() {  return new int[] {1,1}; }
 }

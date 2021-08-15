@@ -5,7 +5,7 @@
 
 package fwew.real.array.xover;
 
-import fwew.population.Variation;
+import fwew.vr.Variation;
 
 /**
  * <p>Title:  RealArityTwo</p>
@@ -14,7 +14,7 @@ import fwew.population.Variation;
  * @author Jonatan Gomez
  * @version 1.0
  */
-public abstract class RealArityTwo implements Variation<double[]>{
+public abstract class RealArityTwo implements Variation<double[][]>{
 
     public abstract double[][] apply( double[] one, double[] two);
  

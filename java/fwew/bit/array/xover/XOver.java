@@ -1,5 +1,5 @@
 package fwew.bit.array.xover;
-import fwew.population.Variation;
+import fwew.vr.Variation;
 import hazarda.Hazarda;
 import kopii.Copier;
 import speco.bit.array.Array;
@@ -12,7 +12,7 @@ import speco.bit.array.Array;
  * @version 1.0
  */
 
-public class XOver implements Variation<Array>{
+public class XOver implements Variation<Array[]>{
     public XOver(){}
 
     /**

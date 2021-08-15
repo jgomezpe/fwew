@@ -1,5 +1,5 @@
 # fwew
-A set of searching concepts and functions for the numtseng infrastructure. It includes concepts of search algorithm such as, search space, goal, informed search (A*, heuristic), uninformed search (breath, depth, iterative depth, uniform cost), variation, mutation, crossover, graph search, hill climbing algorithm, population search, and so on
+A set of searching concepts and functions for the numtseng infrastructure. It includes concepts of search algorithm such as, search space, goal, informed search (A*, heuristic), uninformed search (breath, depth, iterative depth, uniform cost), variation, mutation, crossover, graph search, and so on
 &nbsp;Requires:
 
 &nbsp;kerno.jar, speco.jar, kompari.jar, spuro.jar, matematiko.jar, and hazarda.jar

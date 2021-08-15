@@ -1,9 +1,10 @@
 package fwew.population;
+import fwew.vr.Variation;
 
-public class LocalVariationWrap<T> implements Variation<T> {
-    protected fwew.local.Variation<T> local;
+public class LocalVariationWrap<T> implements Variation<T[]> {
+    protected Variation<T> local;
     
-    public LocalVariationWrap(fwew.local.Variation<T> local) {
+    public LocalVariationWrap(Variation<T> local) {
 	this.local = local;
     }
     

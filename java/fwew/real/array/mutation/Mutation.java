@@ -6,7 +6,7 @@
 
 package fwew.real.array.mutation;
 
-import fwew.local.Variation;
+import fwew.vr.Variation;
 import hazarda.Hazarda;
 
 /**
@@ -39,5 +39,8 @@ public abstract class Mutation implements Variation<double[]>{
 	    for( int i=0; i<x.length; i++ )
 		x[i] += delta[i];
 	return x;
-    }            
+    } 
+
+    @Override
+    public int[] signature() {  return new int[] {1,1}; }
 }

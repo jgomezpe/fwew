@@ -1,6 +1,6 @@
 package fwew.integer.array.mutation;
 
-import fwew.local.Variation;
+import fwew.vr.Variation;
 import hazarda.bit.Random;
 import hazarda.integer.Uniform;
 
@@ -49,4 +49,7 @@ public class IntMutation implements Variation<int[]>{
       for (int i = 0; i < genome.length; i++) if(gb.next()) genome[i] = g.next();
       return genome;
   }
+
+  @Override
+  public int[] signature() {  return new int[] {1,1}; }
 }
